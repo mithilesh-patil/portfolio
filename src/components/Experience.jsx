@@ -38,7 +38,7 @@ export default function Experience() {
                     <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-violet-600/20 blur-3xl" />
                     <div className="relative flex flex-col justify-between gap-4 md:flex-row md:items-start">
                       <div className="flex items-start gap-4">
-                        <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-violet-500 to-cyan-400 font-display text-xl font-bold text-white">
+                        <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-violet-500 to-cyan-400 font-display text-xl font-bold text-snow">
                           D
                         </span>
                         <div>

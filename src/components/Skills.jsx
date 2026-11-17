@@ -15,7 +15,7 @@ import { Reveal, SectionTitle } from "./ui";
 
 const icons = {
   ReactJS: [SiReact, "#61dafb"],
-  NextJS: [SiNextdotjs, "#ffffff"],
+  NextJS: [SiNextdotjs, "var(--color-white)"],
   JavaScript: [SiJavascript, "#f7df1e"],
   HTML5: [SiHtml5, "#e34f26"],
   CSS3: [SiCss, "#2965f1"],
@@ -33,7 +33,7 @@ const icons = {
 };
 
 function SkillCard({ name, i }) {
-  const [Icon, color] = icons[name] || [FiLink, "#fff"];
+  const [Icon, color] = icons[name] || [FiLink, "var(--color-white)"];
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}

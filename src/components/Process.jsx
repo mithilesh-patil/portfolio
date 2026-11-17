@@ -53,7 +53,7 @@ export default function Process() {
                     className="relative z-10 mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-panel text-2xl text-violet-300 shadow-lg shadow-black/40 transition-colors group-hover:border-violet-400/50 group-hover:text-white"
                   >
                     <s.icon />
-                    <span className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-cyan-400 font-display text-[11px] font-bold text-white">
+                    <span className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-cyan-400 font-display text-[11px] font-bold text-snow">
                       {i + 1}
                     </span>
                   </motion.div>

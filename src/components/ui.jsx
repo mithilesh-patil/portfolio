@@ -11,7 +11,7 @@ export const scrollTo = (id) => {
 export function Logo({ onClick }) {
   return (
     <button onClick={onClick} className="group flex items-center gap-3" aria-label="Mithilesh Patil — home">
-      <span className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br from-violet-500 to-cyan-400 font-display text-lg font-bold text-white shadow-lg shadow-violet-500/30 transition-transform duration-500 group-hover:rotate-[8deg] group-hover:scale-105">
+      <span className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br from-violet-500 to-cyan-400 font-display text-lg font-bold text-snow shadow-lg shadow-violet-500/30 transition-transform duration-500 group-hover:rotate-[8deg] group-hover:scale-105">
         M
         <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
       </span>
@@ -64,7 +64,7 @@ export function SectionTitle({ index, kicker, title }) {
   return (
     <div className="mb-16">
       <Reveal>
-        <p className="mb-4 flex items-center gap-3 font-display text-sm uppercase tracking-[0.3em] text-violet-300">
+        <p className="mb-4 flex items-center gap-3 font-display text-xs uppercase tracking-[0.2em] sm:text-sm sm:tracking-[0.3em] text-violet-300">
           <span className="text-white/40">{index}</span>
           <span className="h-px w-10 bg-gradient-to-r from-violet-400 to-transparent" />
           {kicker}
@@ -148,7 +148,7 @@ export function TiltCard({ children, className = "" }) {
       <div
         className="pointer-events-none absolute inset-0 z-10 rounded-[inherit] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         style={{
-          background: `radial-gradient(400px circle at ${glow.x}% ${glow.y}%, rgba(255,255,255,0.08), transparent 40%)`,
+          background: `radial-gradient(400px circle at ${glow.x}% ${glow.y}%, color-mix(in oklab, var(--color-white) 8%, transparent), transparent 40%)`,
         }}
       />
       {children}

@@ -15,7 +15,7 @@ export const profile = {
   // Contact form key comes from .env (VITE_WEB3FORMS_KEY). Empty -> form opens the mail app.
   web3formsKey: import.meta.env.VITE_WEB3FORMS_KEY || "",
   resume: "/Mithilesh_Patil_Resume.pdf?v=5",
-  photo: "/photo.jpg",
+  photo: "/photo.webp",
   summary:
     "Frontend Developer at DCPL Technology Pvt. Ltd., building scalable ReactJS applications and enterprise-grade admin panels across CRM, logistics, banking and healthcare. I care about clean component architecture, airtight RBAC, smooth real-time UI and responsive Bootstrap-powered interfaces.",
 };
@@ -83,7 +83,7 @@ export const skills = {
 export const projects = [
   {
     title: "Harson Exim Admin Panel",
-    image: "/projects/harson.png",
+    image: "/projects/harson.webp",
     domain: "Logistics",
     color: "from-violet-500 to-fuchsia-500",
     accent: "#a855f7",
@@ -99,7 +99,7 @@ export const projects = [
   },
   {
     title: "CRM Admin Panel",
-    image: "/projects/crm.png",
+    image: "/projects/crm.webp",
     domain: "Sales / CRM",
     color: "from-cyan-400 to-blue-500",
     accent: "#22d3ee",
@@ -114,7 +114,7 @@ export const projects = [
   },
   {
     title: "BKN Admin Panel",
-    image: "/projects/bkn.png",
+    image: "/projects/bkn.webp",
     domain: "Banking / Enterprise",
     color: "from-amber-400 to-orange-500",
     accent: "#f59e0b",
@@ -129,7 +129,7 @@ export const projects = [
   },
   {
     title: "Appointment Admin Panel",
-    image: "/projects/appointment.png",
+    image: "/projects/appointment.webp",
     domain: "Healthcare",
     color: "from-emerald-400 to-teal-500",
     accent: "#10b981",

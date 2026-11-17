@@ -74,7 +74,7 @@ export default function Footer() {
                 aria-label={s.label}
                 title={s.label}
                 whileHover={{ y: -4, rotate: -6 }}
-                className="glass flex h-11 w-11 items-center justify-center rounded-xl text-white/75 transition-colors hover:bg-gradient-to-br hover:from-violet-500 hover:to-cyan-400 hover:text-white"
+                className="glass flex h-11 w-11 items-center justify-center rounded-xl text-white/75 transition-colors hover:bg-gradient-to-br hover:from-violet-500 hover:to-cyan-400 hover:text-snow"
               >
                 <s.icon />
               </motion.a>
@@ -89,7 +89,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto mt-14 flex max-w-6xl flex-col items-center justify-between gap-4 border-t border-white/10 py-8 text-sm text-white/50 sm:flex-row">
+      <div className="mx-auto mt-14 flex max-w-6xl flex-col items-center justify-between gap-4 border-t border-white/10 pb-24 pt-8 text-center text-sm sm:pb-8 sm:text-left text-white/50 sm:flex-row">
         <span>Designed &amp; developed by {profile.fullName}</span>
         <LocalTime />
       </div>

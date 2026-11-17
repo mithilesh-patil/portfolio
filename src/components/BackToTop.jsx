@@ -27,7 +27,7 @@ export default function BackToTop() {
               cy="28"
               r="25"
               fill="none"
-              stroke="rgba(255,255,255,0.1)"
+              stroke="color-mix(in oklab, var(--color-white) 12%, transparent)"
               strokeWidth="2.5"
             />
             <motion.circle

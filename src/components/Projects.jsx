@@ -15,7 +15,7 @@ function BrowserShot({ p, onOpen }) {
         <span className="h-2.5 w-2.5 rounded-full bg-red-400/80" />
         <span className="h-2.5 w-2.5 rounded-full bg-yellow-400/80" />
         <span className="h-2.5 w-2.5 rounded-full bg-green-400/80" />
-        <span className="ml-3 flex-1 truncate rounded-md bg-white/5 px-3 py-0.5 text-[11px] text-white/40">
+        <span className="ml-3 min-w-0 flex-1 truncate rounded-md bg-white/5 px-3 py-0.5 text-[11px] text-white/40">
           {p.title.toLowerCase().replace(/\s+/g, "-")}.app/dashboard
         </span>
       </div>
@@ -98,8 +98,8 @@ function ProjectCard({ p, i, total, progress, onOpen }) {
               className="absolute -right-20 -top-20 h-72 w-72 rounded-full opacity-30 blur-[100px]"
               style={{ background: p.accent }}
             />
-            <div className="relative grid gap-8 lg:grid-cols-[1fr_1.25fr] lg:gap-10">
-              <div className="flex flex-col">
+            <div className="relative grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.25fr)] lg:gap-10">
+              <div className="flex min-w-0 flex-col">
                 <div className="mb-4 flex items-center gap-3">
                   <span className="font-display text-sm text-white/40">0{i + 1} / 0{total}</span>
                   <span className={`rounded-full bg-gradient-to-r ${p.color} px-3 py-1 text-xs font-semibold text-black`}>
@@ -125,7 +125,7 @@ function ProjectCard({ p, i, total, progress, onOpen }) {
                 </ul>
               </div>
 
-              <div className="flex flex-col gap-5">
+              <div className="flex min-w-0 flex-col gap-5">
                 <BrowserShot p={p} onOpen={onOpen} />
                 <div className="flex flex-wrap gap-2">
                   {p.tags.map((t) => (

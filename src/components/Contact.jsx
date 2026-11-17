@@ -189,7 +189,7 @@ export default function Contact() {
       <div className="relative mx-auto max-w-6xl">
         <div className="mb-16 text-center">
           <Reveal>
-            <p className="font-display text-sm uppercase tracking-[0.3em] text-violet-300">
+            <p className="font-display text-xs uppercase tracking-[0.2em] sm:text-sm sm:tracking-[0.3em] text-violet-300">
               08 — Contact
             </p>
           </Reveal>
@@ -216,6 +216,7 @@ export default function Contact() {
                   <img
                     src={profile.photo}
                     alt={profile.fullName}
+                    loading="lazy"
                     className="h-16 w-16 rounded-2xl object-cover object-[50%_20%] ring-2 ring-violet-400/40"
                   />
                   <div>
@@ -238,7 +239,7 @@ export default function Contact() {
                         {...linkProps(c)}
                         className="group flex items-center gap-4 rounded-2xl p-3 transition-colors hover:bg-white/[0.05]"
                       >
-                        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/5 text-violet-300 transition-all duration-300 group-hover:bg-gradient-to-br group-hover:from-violet-500 group-hover:to-cyan-400 group-hover:text-white">
+                        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/5 text-violet-300 transition-all duration-300 group-hover:bg-gradient-to-br group-hover:from-violet-500 group-hover:to-cyan-400 group-hover:text-snow">
                           <c.icon />
                         </span>
                         <span className="min-w-0 flex-1">
@@ -334,7 +335,7 @@ export default function Contact() {
                 type="submit"
                 disabled={status === "sending"}
                 whileTap={{ scale: 0.97 }}
-                className="group relative mt-2 flex w-full disabled:cursor-wait disabled:opacity-70 items-center justify-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-violet-500 to-cyan-400 py-4 font-semibold text-white shadow-lg shadow-violet-500/25"
+                className="group relative mt-2 flex w-full disabled:cursor-wait disabled:opacity-70 items-center justify-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-violet-500 to-cyan-400 py-4 font-semibold text-snow shadow-lg shadow-violet-500/25"
               >
                 <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
                 {status === "sending" ? (
