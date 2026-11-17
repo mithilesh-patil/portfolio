@@ -14,7 +14,7 @@ export const profile = {
   mapUrl: "https://www.google.com/maps/search/?api=1&query=Surat%2C%20Gujarat",
   // Contact form key comes from .env (VITE_WEB3FORMS_KEY). Empty -> form opens the mail app.
   web3formsKey: import.meta.env.VITE_WEB3FORMS_KEY || "",
-  resume: "/Mithilesh_Patil_Resume.pdf?v=4",
+  resume: "/Mithilesh_Patil_Resume.pdf?v=5",
   photo: "/photo.jpg",
   summary:
     "Frontend Developer at DCPL Technology Pvt. Ltd., building scalable ReactJS applications and enterprise-grade admin panels across CRM, logistics, banking and healthcare. I care about clean component architecture, airtight RBAC, smooth real-time UI and responsive Bootstrap-powered interfaces.",
