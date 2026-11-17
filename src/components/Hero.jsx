@@ -65,7 +65,7 @@ function BigName({ text, ready, offset = 0, className = "" }) {
 
 const chips = [
   { icon: SiReact, label: "React", color: "#61dafb", pos: "-left-6 top-10", delay: 0 },
-  { icon: SiNextdotjs, label: "Next.js", color: "#ffffff", pos: "-right-8 top-24", delay: 0.6 },
+  { icon: SiNextdotjs, label: "Next.js", color: "var(--color-white)", pos: "-right-8 top-24", delay: 0.6 },
   { icon: SiBootstrap, label: "Bootstrap", color: "#a78bfa", pos: "-left-10 bottom-20", delay: 1.2 },
   { icon: SiJavascript, label: "ES6+", color: "#f7df1e", pos: "-right-4 bottom-8", delay: 1.8 },
 ];
@@ -91,6 +91,8 @@ function AvatarCard({ ready, mx, my }) {
           <img
             src={profile.photo}
             alt={profile.fullName}
+            fetchPriority="high"
+            decoding="async"
             className="h-full w-full object-cover object-[50%_25%] transition-transform duration-700 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/10 to-transparent" />
@@ -163,7 +165,7 @@ export default function Hero({ ready }) {
             initial={{ opacity: 0, x: -20 }}
             animate={ready ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.15 }}
-            className="mb-4 flex items-center gap-3 font-display text-sm uppercase tracking-[0.3em] text-violet-300"
+            className="mb-4 flex items-center gap-3 font-display text-xs uppercase tracking-[0.2em] sm:text-sm sm:tracking-[0.3em] text-violet-300"
           >
             <span className="h-px w-8 bg-gradient-to-r from-violet-400 to-transparent" />
             Frontend Developer · ReactJS
@@ -198,8 +200,8 @@ export default function Hero({ ready }) {
                   className="group relative flex items-center gap-2 overflow-hidden rounded-full bg-white px-7 py-4 font-semibold text-black"
                 >
                   <span className="absolute inset-0 translate-y-full bg-gradient-to-r from-violet-500 to-cyan-400 transition-transform duration-500 group-hover:translate-y-0" />
-                  <span className="relative transition-colors group-hover:text-white">View my work</span>
-                  <FiArrowDownRight className="relative transition-transform duration-300 group-hover:rotate-[-45deg] group-hover:text-white" />
+                  <span className="relative transition-colors group-hover:text-snow">View my work</span>
+                  <FiArrowDownRight className="relative transition-transform duration-300 group-hover:rotate-[-45deg] group-hover:text-snow" />
                 </button>
               </Magnetic>
               <Magnetic>
@@ -225,7 +227,7 @@ export default function Hero({ ready }) {
                     initial={{ opacity: 0, y: 20 }}
                     animate={ready ? { opacity: 1, y: 0 } : {}}
                     transition={{ delay: 1.3 + i * 0.1 }}
-                    className="glass flex h-12 w-12 items-center justify-center rounded-full text-lg text-white/80 transition-colors hover:bg-gradient-to-br hover:from-violet-500 hover:to-cyan-400 hover:text-white"
+                    className="glass flex h-12 w-12 items-center justify-center rounded-full text-lg text-white/80 transition-colors hover:bg-gradient-to-br hover:from-violet-500 hover:to-cyan-400 hover:text-snow"
                   >
                     <s.icon />
                   </motion.a>

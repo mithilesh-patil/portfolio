@@ -1,8 +1,14 @@
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  useMotionValueEvent,
+  useScroll,
+} from "framer-motion";
 import { FiDownload } from "react-icons/fi";
 import { profile } from "../data";
 import { Logo, scrollTo } from "./ui";
+import ThemeToggle from "./ThemeToggle";
 import { linkProps, socials } from "./socials";
 
 const links = [
@@ -29,8 +35,11 @@ export default function Navbar() {
 
   useEffect(() => {
     const obs = new IntersectionObserver(
-      (entries) => entries.forEach((e) => e.isIntersecting && setActive("#" + e.target.id)),
-      { rootMargin: "-45% 0px -50% 0px" }
+      (entries) =>
+        entries.forEach(
+          (e) => e.isIntersecting && setActive("#" + e.target.id),
+        ),
+      { rootMargin: "-45% 0px -50% 0px" },
     );
     links.forEach((l) => {
       const el = document.querySelector(l.id);
@@ -64,14 +73,20 @@ export default function Navbar() {
                 <button
                   onClick={() => go(l.id)}
                   className={`relative rounded-full px-4 py-2 text-sm transition-colors ${
-                    active === l.id ? "text-white" : "text-white/60 hover:text-white"
+                    active === l.id
+                      ? "text-white"
+                      : "text-white/60 hover:text-white"
                   }`}
                 >
                   {active === l.id && (
                     <motion.span
                       layoutId="nav-pill"
                       className="absolute inset-0 -z-10 rounded-full bg-white/10"
-                      transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 350,
+                        damping: 30,
+                      }}
                     />
                   )}
                   {l.label}
@@ -80,30 +95,39 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <div className="hidden items-center gap-2 lg:flex">
-            <a
-              href={profile.resume}
-              download="Mithilesh_Patil_Resume.pdf"
-              className="flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm transition-colors hover:bg-white/10"
-            >
-              <FiDownload /> Resume
-            </a>
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <div className="hidden items-center gap-2 lg:flex">
+              <a
+                href={profile.resume}
+                download="Mithilesh_Patil_Resume.pdf"
+                className="flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm transition-colors hover:bg-white/10"
+              >
+                <FiDownload /> Resume
+              </a>
+              <button
+                onClick={() => go("#contact")}
+                className="rounded-full bg-white px-5 py-2 text-sm font-semibold text-black transition-transform hover:scale-105"
+              >
+                Hire Me
+              </button>
+            </div>
+
             <button
-              onClick={() => go("#contact")}
-              className="rounded-full bg-white px-5 py-2 text-sm font-semibold text-black transition-transform hover:scale-105"
+              onClick={() => setOpen((v) => !v)}
+              className="relative z-50 flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
+              aria-label="Menu"
             >
-              Hire Me
+              <motion.span
+                animate={open ? { rotate: 45, y: 4 } : { rotate: 0, y: 0 }}
+                className="h-0.5 w-6 bg-white"
+              />
+              <motion.span
+                animate={open ? { rotate: -45, y: -4 } : { rotate: 0, y: 0 }}
+                className="h-0.5 w-6 bg-white"
+              />
             </button>
           </div>
-
-          <button
-            onClick={() => setOpen((v) => !v)}
-            className="relative z-50 flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
-            aria-label="Menu"
-          >
-            <motion.span animate={open ? { rotate: 45, y: 4 } : { rotate: 0, y: 0 }} className="h-0.5 w-6 bg-white" />
-            <motion.span animate={open ? { rotate: -45, y: -4 } : { rotate: 0, y: 0 }} className="h-0.5 w-6 bg-white" />
-          </button>
         </nav>
       </motion.header>
 

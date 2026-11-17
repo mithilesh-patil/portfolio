@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import Lenis from "lenis";
+import { Analytics } from "@vercel/analytics/react";
 import Preloader from "./components/Preloader";
 import Cursor from "./components/Cursor";
 import ScrollProgress from "./components/ScrollProgress";
@@ -63,6 +64,7 @@ export default function App() {
       </main>
       <Footer />
       <BackToTop />
+      <Analytics />
     </div>
   );
 }

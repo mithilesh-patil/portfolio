@@ -53,7 +53,7 @@ export default function Cursor() {
           width: hover ? 48 : 30,
           height: hover ? 48 : 30,
           opacity: visible ? 1 : 0,
-          borderColor: hover ? "rgba(167,139,250,0.9)" : "rgba(255,255,255,0.35)",
+          borderColor: hover ? "rgba(167,139,250,0.9)" : "color-mix(in oklab, var(--color-white) 35%, transparent)",
           backgroundColor: hover ? "rgba(139,92,246,0.12)" : "rgba(139,92,246,0)",
         }}
         transition={{ type: "spring", stiffness: 300, damping: 25 }}
