@@ -135,6 +135,16 @@ export default function Hero({ ready }) {
   const yText = useTransform(scrollY, [0, 600], [0, 160]);
   const opacity = useTransform(scrollY, [0, 500], [1, 0]);
 
+  // The scroll fade only suits the one-screen desktop hero. On stacked layouts the
+  // hero is far taller than 500px, so fading it left the photo as a blank gap.
+  const [fadeOnScroll, setFadeOnScroll] = useState(() => window.matchMedia("(min-width: 1024px)").matches);
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1024px)");
+    const onChange = (e) => setFadeOnScroll(e.matches);
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
+
   const heroSocials = socials.filter((s) => ["linkedin", "github", "whatsapp", "email"].includes(s.key));
 
   return (
@@ -157,7 +167,7 @@ export default function Hero({ ready }) {
       />
 
       <motion.div
-        style={{ y: yText, opacity }}
+        style={fadeOnScroll ? { y: yText, opacity } : undefined}
         className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-10 lg:gap-16 lg:grid-cols-[1.35fr_1fr]"
       >
         <div>
