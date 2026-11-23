@@ -56,12 +56,12 @@ function SkillCard({ name, i }) {
 
 export default function Skills() {
   return (
-    <section id="skills" className="relative overflow-hidden py-28">
+    <section id="skills" className="relative overflow-hidden py-16 md:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <SectionTitle index="03" kicker="Toolbox" title="Skills I bring to the table." />
       </div>
 
-      <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-2">
+      <div className="mx-auto grid max-w-6xl gap-10 px-6 lg:gap-12 lg:grid-cols-2">
         {Object.entries(skills).map(([group, list], gi) => (
           <Reveal key={group} delay={gi * 0.15}>
             <h3 className="mb-5 flex items-center gap-3 font-display text-lg text-white/80">

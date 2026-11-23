@@ -9,7 +9,7 @@ export default function Experience() {
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start 0.8", "end 0.6"] });
 
   return (
-    <section id="experience" className="relative px-6 py-28">
+    <section id="experience" className="relative px-6 py-16 md:py-28">
       <div className="mx-auto max-w-6xl">
         <SectionTitle index="06" kicker="Experience" title="Where I've been shipping." />
 

@@ -154,10 +154,10 @@ export default function Projects() {
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
 
   return (
-    <section id="projects" className="relative px-6 pt-32">
+    <section id="projects" className="relative px-6 pt-16 md:pt-32">
       <div className="mx-auto max-w-6xl">
         <SectionTitle index="04" kicker="Selected work" title="Enterprise panels, built to scale." />
-        <div ref={ref} className="relative pb-24">
+        <div ref={ref} className="relative pb-12 md:pb-24">
           {projects.map((p, i) => (
             <ProjectCard
               key={p.title}

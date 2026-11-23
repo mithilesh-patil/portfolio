@@ -5,7 +5,7 @@ import { Reveal, SectionTitle } from "./ui";
 
 export default function Education() {
   return (
-    <section id="education" className="relative px-6 py-24">
+    <section id="education" className="relative px-6 py-14 md:py-24">
       <div className="mx-auto max-w-6xl">
         <SectionTitle index="07" kicker="Education & languages" title="The foundation." />
 

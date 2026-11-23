@@ -21,7 +21,7 @@ export default function About() {
   const words = profile.summary.split(" ");
 
   return (
-    <section id="about" className="relative px-6 py-32">
+    <section id="about" className="relative px-6 py-16 md:py-32">
       <div className="mx-auto max-w-6xl">
         <SectionTitle index="01" kicker="About me" title="Code that feels as good as it looks." />
 
@@ -38,7 +38,7 @@ export default function About() {
         </p>
 
         <Reveal delay={0.1}>
-          <div className="mt-20 grid overflow-hidden rounded-3xl border border-white/10 bg-panel/70 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 md:mt-20 grid overflow-hidden rounded-3xl border border-white/10 bg-panel/70 sm:grid-cols-2 lg:grid-cols-4">
             {glance.map((g, i) => {
               const Icon = glanceIcons[g.icon];
               return (

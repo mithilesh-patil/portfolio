@@ -62,7 +62,7 @@ export function SplitText({ text, className = "", delay = 0, stagger = 0.03 }) {
 
 export function SectionTitle({ index, kicker, title }) {
   return (
-    <div className="mb-16">
+    <div className="mb-10 md:mb-16">
       <Reveal>
         <p className="mb-4 flex items-center gap-3 font-display text-xs uppercase tracking-[0.2em] sm:text-sm sm:tracking-[0.3em] text-violet-300">
           <span className="text-white/40">{index}</span>

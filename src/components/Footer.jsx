@@ -37,8 +37,8 @@ function LocalTime() {
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 px-6 pt-16">
-      <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-3">
+    <footer className="relative overflow-hidden border-t border-white/10 px-6 pt-12 md:pt-16">
+      <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-3 md:gap-12">
         <div>
           <Logo onClick={() => scrollTo("#home")} />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/50">
@@ -89,7 +89,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto mt-14 flex max-w-6xl flex-col items-center justify-between gap-4 border-t border-white/10 pb-24 pt-8 text-center text-sm sm:pb-8 sm:text-left text-white/50 sm:flex-row">
+      <div className="mx-auto mt-10 md:mt-14 flex max-w-6xl flex-col items-center justify-between gap-4 border-t border-white/10 pb-24 pt-8 text-center text-sm sm:pb-8 sm:text-left text-white/50 sm:flex-row">
         <span>Designed &amp; developed by {profile.fullName}</span>
         <LocalTime />
       </div>

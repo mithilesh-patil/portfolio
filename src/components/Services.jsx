@@ -59,7 +59,7 @@ function SpotlightCard({ s, i }) {
 
 export default function Services() {
   return (
-    <section id="services" className="relative px-6 py-28">
+    <section id="services" className="relative px-6 py-16 md:py-28">
       <div className="mx-auto max-w-6xl">
         <SectionTitle index="02" kicker="What I do" title="What I build at work, every day." />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

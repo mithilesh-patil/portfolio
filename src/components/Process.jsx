@@ -32,7 +32,7 @@ export default function Process() {
   const width = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section id="process" className="relative px-6 py-32">
+    <section id="process" className="relative px-6 py-16 md:py-32">
       <div className="mx-auto max-w-6xl">
         <SectionTitle index="05" kicker="How I work" title="From idea to production." />
 

@@ -183,11 +183,11 @@ export default function Contact() {
   const list = socials.filter((s) => s.key !== "whatsapp");
 
   return (
-    <section id="contact" className="relative overflow-hidden px-6 py-32">
+    <section id="contact" className="relative overflow-hidden px-6 py-16 md:py-32">
       <div className="absolute left-1/2 top-1/4 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-violet-600/15 blur-[140px]" />
 
       <div className="relative mx-auto max-w-6xl">
-        <div className="mb-16 text-center">
+        <div className="mb-10 text-center md:mb-16">
           <Reveal>
             <p className="font-display text-xs uppercase tracking-[0.2em] sm:text-sm sm:tracking-[0.3em] text-violet-300">
               08 — Contact

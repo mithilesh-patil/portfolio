@@ -140,7 +140,7 @@ export default function Hero({ ready }) {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden px-6 pb-24 pt-32"
+      className="relative flex min-h-screen items-center overflow-hidden px-6 pb-16 pt-28 md:pb-24 md:pt-32"
       onMouseMove={(e) => {
         mx.set(e.clientX / window.innerWidth - 0.5);
         my.set(e.clientY / window.innerHeight - 0.5);
@@ -158,7 +158,7 @@ export default function Hero({ ready }) {
 
       <motion.div
         style={{ y: yText, opacity }}
-        className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-16 lg:grid-cols-[1.35fr_1fr]"
+        className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-10 lg:gap-16 lg:grid-cols-[1.35fr_1fr]"
       >
         <div>
           <motion.p
